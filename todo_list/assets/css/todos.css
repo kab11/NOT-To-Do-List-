@@ -1,0 +1,117 @@
+body {
+  background: #3a6186;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: roboto;
+
+}
+
+h1 {
+  background-color: rgba(72, 61, 139, 0.8);
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+input {
+  background-color: #f7f7f7;
+  border: 3px solid rgba(0, 0, 0, 0); /*Invisible border to make the lines flush*/
+  box-sizing: border-box;
+  color: rgba(72, 61, 139, 0.8);
+  font-size: 18px;
+  padding: 13px 13px 13px 20px;
+  width: 100%;
+}
+/*width and height properties include the padding and border, but not the margin
+you can adjust for this by using the border-box property*/
+
+input:focus {
+  background-color: white;
+  border: 3px solid rgba(72, 61, 139, 0.8);
+  outline: none;
+}
+
+li {
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px; /*changes the size of the line*/
+  color: #666;
+  position: relative;
+
+}
+
+/*styles every other li with a grey background*/
+li:nth-child(2n) {
+  background-color: #f7f7f7;
+}
+
+li:hover span {
+  opacity: 1.0;
+  width: 40px;
+}
+
+span {
+  background-color: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  opacity: 0;
+  transition: 0.3s linear;
+  width: 0px;
+}
+
+strike {
+  font-size: 40px;
+  font-style: italic;
+  position: relative;
+}
+
+
+strike::after {
+  border-bottom: 0.125em solid rgba(255, 0, 0, 0.5);
+  content: "";
+  left: 0;
+  line-height: 1em;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+ul {
+  list-style: none;   /*get rid of bullet points*/
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  width: 360px;
+}
+
+#notText {
+  color: red;
+  display: inline;
+  font-family: 'Finger Paint', cursive;
+  font-size: 45px;
+  font-style: oblique;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.fa-pencil-square-o {
+  float: right;
+}
